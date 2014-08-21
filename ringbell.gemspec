@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Ringbell::VERSION
   spec.authors       = ["Vladimir Krivchenko"]
   spec.email         = ["vladimir.krivchenko@gmail.com"]
-  spec.summary       = %q{TODO: Write a short summary. Required.}
-  spec.description   = %q{TODO: Write a longer description. Optional.}
-  spec.homepage      = ""
+  spec.summary       = %q{A tool that can attach notifications to the ActiveRecord models for certain users.}
+  spec.description   = %q{A tool that can attach notifications to the ActiveRecord models for certain users. Multiple notifications per object supported.}
+  spec.homepage      = "http://github.com/prdetective/ringbell"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
