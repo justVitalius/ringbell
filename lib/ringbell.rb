@@ -1,5 +1,3 @@
 require "ringbell/version"
-
-module Ringbell
-  # Your code goes here...
-end
+require 'ringbell/base'
+require 'ringbell/notification'
