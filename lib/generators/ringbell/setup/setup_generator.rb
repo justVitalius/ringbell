@@ -1,15 +1,15 @@
 require 'rails/generators'
 require 'rails/generators/migration'
 
-module Unread
-  class MigrationGenerator < Rails::Generators::Base
+module Ringbell
+  class SetupGenerator < Rails::Generators::Base
     include Rails::Generators::Migration
 
-    desc "Generates migration for read_markers"
-    # source_root File.expand_path('../templates', __FILE__)
+    desc "Sets up the required table for the gem"
+    source_root File.expand_path('..', __FILE__)
 
     def create_migration_file
-      migration_template 'migration.rb', 'db/migrate/crete_ringbell_table.rb'
+      migration_template 'migration.rb', 'db/migrate/create_ringbell_notifications.rb'
     end
 
     def self.next_migration_number(dirname)
