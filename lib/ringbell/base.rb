@@ -64,7 +64,7 @@ module RingBell
       if self.class.multiple_notifications # разрешены множественные нотификации?
         self.notifications.create(user: user, message: options[:message])#, changer: options[:changer]) # создаем новую нотификацию в любом случае
       else
-        self.notifications.find_or_create_by_user_id(user.id) # Создаем нотификацию, если ее еще нет
+        self.notifications.find_or_create_by(user_id: user.id) # Создаем нотификацию, если ее еще нет
       end
     end 
   end
