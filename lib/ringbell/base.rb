@@ -5,7 +5,7 @@ module RingBell
     has_many :notifications, class_name: 'RingBell::Notification', as: :notifiable, dependent: :destroy
     class << self; attr_accessor :interesants, :multiple_notifications end # Class-level instance variable для хранения интересантов
 
-    scope :with_notifications_for, -> (user) {includes(:notifications).where("notifications.user_id = #{user.id}")}
+    scope :with_notifications_for, -> (user) {includes(:notifications).where("notifications.user_id = '#{user.id}'")}
   end
 
   module ClassMethods
