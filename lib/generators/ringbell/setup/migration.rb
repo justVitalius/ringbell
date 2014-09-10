@@ -3,7 +3,7 @@ class CreateRingbellNotifications < ActiveRecord::Migration
     create_table :ringbell_notifications do |t|
       t.integer :notifiable_id, null: false
       t.string :notifiable_type
-      t.integer :user_id, null: false
+      t.uuid :user_id, null: false
       t.string :message
     end
 
